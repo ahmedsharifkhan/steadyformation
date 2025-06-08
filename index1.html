@@ -5,83 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Steady Formation Email Dashboard</title>
   <style>
-    :root {
-      --primary: #6b4eff;
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card: #1e1e1e;
-      --border: #333;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: #f4f6fc;
+      color: #333;
     }
-
     header {
-      background-color: var(--primary);
+      background-color: #6b4eff;
       padding: 20px 40px;
       color: #fff;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 28px;
     }
-
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
-
-    .search-box {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .search-box input {
-      width: 80%;
-      max-width: 400px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid var(--border);
-      font-size: 16px;
-    }
-
     .email-list {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
     }
-
     .email-card {
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: #fff;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      width: 220px;
+      width: 240px;
       padding: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
       transition: transform 0.2s ease;
       text-align: center;
     }
-
     .email-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
     }
-
     .email-card a {
       text-decoration: none;
-      color: var(--primary);
+      color: #6b4eff;
       font-weight: 600;
       font-size: 16px;
     }
-
     .footer {
       margin-top: 50px;
       text-align: center;
@@ -95,27 +65,12 @@
       }
     }
   </style>
-  <script>
-    function filterEmails() {
-      var input = document.getElementById("searchInput");
-      var filter = input.value.toLowerCase();
-      var cards = document.getElementsByClassName("email-card");
-
-      for (var i = 0; i < cards.length; i++) {
-        var text = cards[i].textContent || cards[i].innerText;
-        cards[i].style.display = text.toLowerCase().includes(filter) ? "block" : "none";
-      }
-    }
-  </script>
 </head>
 <body>
   <header>
     <h1>📧 Steady Formation Email Dashboard</h1>
   </header>
   <div class="container">
-    <div class="search-box">
-      <input type="text" id="searchInput" onkeyup="filterEmails()" placeholder="Search Email... (e.g. Email 12)" />
-    </div>
     <div class="email-list">
       <div class="email-card"><a href="1.html" target="_blank">Email 1</a></div>
       <div class="email-card"><a href="2.html" target="_blank">Email 2</a></div>
